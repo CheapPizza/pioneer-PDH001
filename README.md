@@ -16,6 +16,7 @@ Program a Pioneer PDH001 EEPROM to unlock a code locked KEX-900/KEX-500/DEX-77 h
 - This has been tested to work on a KEX-900 cassette deck. It should work on other Pioneer head units using the same PDH001 EEPROM as well.
 - I have not tested programming with a programming clip. Use at your own risk.
 - Look up the X24C44 datasheet to help with pinout.
+- If you want to be safe buy X24C44 chips from AliexPress/eBay to test. They are identical to the PDH001 and much cheaper.
 
 ### How to program
 1. Connect the EEPROM to the Arduino according to the pinout below. PDH001 and X24C44 have the same pinout.
