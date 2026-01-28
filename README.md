@@ -1,5 +1,5 @@
 # pioneer-PDH001
-Program a Pioneer PDH001 EEPROM to unlock a code locked KEX-900/KEX-500/DEX-77 head unit.
+Program a Pioneer PDH001 EEPROM to unlock a code locked KEX-900/KEX-500/DEX-77 head unit. This will also clear the 3 hour lockout activated by entering an incorrect pin 3 times.
 
 ## Requirements
 - Any PC capable of programming an Arduino
@@ -17,7 +17,8 @@ Program a Pioneer PDH001 EEPROM to unlock a code locked KEX-900/KEX-500/DEX-77 h
 6. Upload the sketch to the Arduino board.
 7. Verify you can see the output so you know the program executed correctly.
 8. Power off the Arduino.
-9. Done!
+9. Done, after reinstalling the EEPROM the code is now 7777.
+10. (Optional) The pin can now be set by holding volume + and - after powering on the unit. 0000 should remove the code entirely.
 
 Note: If you did not see the output you can restart the Arduino by pressing the reset button or unplugging and plugging it back in.
 
@@ -35,3 +36,10 @@ Note: If you did not see the output you can restart the Arduino by pressing the 
 | 8 | Vcc (+5V) | +5V | |
 
 **Note:** Pin 6 (RECALL) and Pin 7 (STORE) should be pulled up to Vcc (+5V) by placing a 10k ohm resistor between each pin and Vcc. This is because the code does the recall and store operations. Leaving these inputs disconnected may lead to unpredictable behavior.
+
+# Development
+The program works for writing but reading is not implemented yet.  
+The read data seems bit shifted and I haven't figured out why.  
+As the main purpose of this program is to unlock the head unit I feel no need to spend more time on this additional feature.  
+I do not own the unit (KEX-900) this was tested on and will have to send it back to it's owner so I am unable to test further.  
+If you do figure it out feel free to create a pull request!
