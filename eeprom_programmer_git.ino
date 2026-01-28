@@ -34,7 +34,7 @@ void setup() {
   for (int i = 0; i <= 15; i++) {
     writeWord(i, 0);
   }
-  // Writin known PIN (7777)
+  // Writing known PIN (7777)
   writeWord(address, data);
   sendSTO();
 }
