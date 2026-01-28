@@ -9,6 +9,15 @@ Program a Pioneer PDH001 EEPROM to unlock a code locked KEX-900/KEX-500/DEX-77 h
 - A way to connect the EEPROM to the Arduino (e.g., breadboard, jumper wires, etc.)
 
 ## Instructions
+
+### Before you start:
+- I higly recommend soldering a DIP-8 socket to the head unit so you do not have to resolder the EEPROM each time you want to program it.
+- I am not responsible for you bricking the EEPROM by connecting it incorrectly.
+- This has been tested to work on a KEX-900 cassette deck. It should work on other Pioneer head units using the same PDH001 EEPROM as well.
+- I have not tested programming with a programming clip. Use at your own risk.
+- Look up the X24C44 datasheet to help with pinout.
+
+### How to program
 1. Connect the EEPROM to the Arduino according to the pinout below. PDH001 and X24C44 have the same pinout.
 2. Clone the repository or download the .ino file.
 3. Open the .ino file in the Arduino IDE.
@@ -43,3 +52,7 @@ The read data seems bit shifted and I haven't figured out why.
 As the main purpose of this program is to unlock the head unit I feel no need to spend more time on this additional feature.  
 I do not own the unit (KEX-900) this was tested on and will have to send it back to it's owner so I am unable to test further.  
 If you do figure it out feel free to create a pull request!
+
+# Credits
+The code system uses a simple mapping for the pin. The decoding logic and other related useful information can be found here:
+[Turbo Dodge forum](https://www.turbododge.com/threads/resetting-code-on-pioneer-dex-77.137295/page-2)
