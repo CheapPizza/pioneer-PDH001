@@ -26,7 +26,21 @@ void setup() {
 
   int address = 0b0000;
   // int data = 0b1000100010001000; // This should theoretically set the pin to 0000 = disabled, but does not work
-  int data = 0b0001000100010001;
+  int data = 0b0001000100010001; // Sets the pin to 7777 (writes 1111). See decoding table below.
+
+  // Decoding table for pin
+  // https://www.turbododge.com/threads/resetting-code-on-pioneer-dex-77.137295/page-2
+  // Memory	Pin
+  // 8	    0
+  // 4	    1
+  // C	    2
+  // 2	    3
+  // A	    4
+  // 6	    5
+  // E	    6
+  // 1	    7
+  // 9	    8
+  // 5	    9
 
   sendRCL();
   sendWREN();
